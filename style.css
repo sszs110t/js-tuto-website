@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: 'Ubuntu', sans-serif;
+    /* 基準に対して1.2倍 */
+    font-size: 1.2rem;
+    /* ブラウザの縦、横方向に100%で表示 */
+    width: 100vw;
+    height: 100vh;
+    /* 指定した色をグラデーションにする */
+    background: linear-gradient(to right, rgb(130, 237, 144), #6eadda);
+    /* はみ出たところを隠す */
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    /* 親要素に対して横並びにする */
+    display: flex;
+    /* 余白80% */
+    width: 90%;
+    /* 上下20px、横幅自動 */
+    margin: 20px auto;
+    /* 縦方向に対して真ん中に表示 */
+    align-items: center;
+    /* 文字の太さ */
+    font-weight: 550;
+    /* 縦並びの要素をそろえる
+    justify-content: space-between; */   
+    position: sticky;
+    z-index: 1;
+}
+
+.nav-links {
+ flex: 1;
+ /* 右端にそろえる */
+ text-align: right;
+}
+
+.nav-links li{
+    /* li の・を消す */
+    list-style: none;
+}
+
+.logo-area {
+    flex-basis: 330px;
+    /* 親要素に対して横並びにする */
+    display: flex;
+    /* 横並びの要素をそろえる */
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+    height: 20%;
+    margin: 0px 12px;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+.nav-links ul a {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links ul a:hover {
+    color: cadetblue;
+}
+
+.infomation {
+    width: 1000px;
+    height: 1000px;
+    /* background: #ccc; */
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+}
+
+#circle {
+    width: 1000px;
+    height: 1000px;
+    /* background: #ccc; */
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: (0deg);
+    transition: 1s;
+}
+
+.feature {
+    display: flex;
+    position: absolute;
+    /* top: 450px;
+    right: 70%; */
+    color: white;
+
+}
+
+.feature img {
+    width: 70px;
+    margin-right: 12px;
+}
+
+.one {
+    top: 450px;
+    right: 70px;
+}
+
+.two {
+    top: 100px;
+    left: 340px;
+    transform: rotate(-90deg);
+}
+
+.three {
+    bottom: 450px;
+    left: 50px;
+    transform: rotate(-180deg);
+
+}
+
+.four {
+    bottom: 150px;
+    right: 370px;
+    transform: rotate(-270deg);
+
+}
+
+.pc {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+    z-index: 1;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.control img {
+    width: 15%;
+}
+
+.control h3 {
+    color: #fff;
+    margin: 20px 0;
+}
+
+#upBtn {
+    cursor: pointer;
+}
+
+#downBtn {
+    cursor: pointer;
+    transform: rotate(-180deg);
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    border-top: 520px solid #fff;
+    border-right: 520px solid transparent;
+    /* border-right: 520px solid #b414a9; */
+    border-bottom: 520px solid #fff;
+    border-left: 520px solid #fff;
+}
